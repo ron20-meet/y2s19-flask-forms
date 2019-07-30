@@ -10,14 +10,14 @@
     <hr>
     
     {% for student in students %}
-    <p>
-	    Name: <a href="{{url_for('display_student', student_id=student.student_id)}}">{{student.name}}</a><br>
+    <p id="for">
+	    Name: {{student.name}}<br>
 	    Class: {{student.year}}<br>
 	    Finished Lab: {{student.finished_lab}}
     </p>
     {% endfor %}
 
-    <a href="{{url_for('add_student_route')}}">Add Student</a>
+    <a href="{{url_for('add')}}">Add Student</a>
 
 </body>
 </html>
